@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     <div className={styles.container}>
       {/* Barra de navegação */}
 {/* Barra de navegação */}
-<nav className={styles.navbar}>
+{/* <nav className={styles.navbar}>
   <div className={styles.logo}>
     <img src="/Logo-07.png" alt="ComasApp Logo" className={styles.logoImage} />
   </div>
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
     <span className={styles.menuLine}></span>
     <span className={styles.menuLine}></span>
   </div>
-</nav>
+</nav> */}
 
 <section className={styles.section}>
   <div className={styles.leftColumn}>
