@@ -115,14 +115,13 @@
   font-weight: bold;
   margin-bottom: 10px;
   padding-left: 80px;
-
 }
 
 .subtitle {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-    padding-left: 80px;
+  padding-left: 80px;
 }
 
 .logoGrande {
@@ -132,6 +131,7 @@
   margin-bottom: 20px;
 }
 
+/* Slogan y botones */
 .slogan {
   font-size: 1rem;
   margin-bottom: 20px;
@@ -166,22 +166,28 @@
 /* Estilos responsivos para tablet y móvil */
 @media (max-width: 1024px) {
   .section {
-    align-items: center;
+    align-items: flex-start; /* Alineación de los elementos al inicio */
     flex-direction: column;
-    text-align: center;
+    text-align: left; /* Alineación del texto a la izquierda */
     gap: 30px; /* Espacio entre las columnas */
+    padding-left: 20px; /* Añadir un poco de espacio a la izquierda */
+    padding-right: 20px; /* Añadir un poco de espacio a la derecha */
   }
 
   .leftColumn {
     padding-right: 0;
+    width: 100%; /* Asegurarse de que ocupe todo el ancho */
   }
 
   .title, .subtitle, .slogan {
     margin-left: 0;
+    padding-left: 0; /* Alinear el texto a la izquierda */
+    text-align: left; /* Alinear el texto a la izquierda */
   }
 
   .logoGrande {
     margin: 0 auto; /* Centrar logo en pantallas pequeñas */
+    display: none; /* Desaparecer el logo en pantallas pequeñas */
   }
 
   .mockupImage {
@@ -212,6 +218,11 @@
     padding: 15px;
     font-size: 1rem;
   }
+
+  /* Desaparecer la imagen de logo grande en móviles */
+  .logoGrande {
+    display: none;
+  }
 }
 
 /* Estilos generales de las secciones con blur */
@@ -240,6 +251,10 @@
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
+
+  
+
+  
 }
 
 .placeholderText {
@@ -318,6 +333,7 @@
   flex-direction: column;
   align-items: flex-start; /* Alinear texto a la izquierda */
   gap: 20px;
+  box-shadow: ;
 }
 
 .imageColumn {
@@ -343,6 +359,7 @@
   color: white;
   font-size: 1rem;
   line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsividad para tablets y móviles */
@@ -365,6 +382,7 @@
 
   .textList {
     font-size: 0.9rem; /* Reducir tamaño del texto en móviles */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
 
   .image {
