@@ -1,0 +1,525 @@
+/* styles/Home.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.container {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../public/background.jpg'); /* Fondo único para todas las pantallas */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen inicialmente */
+  background-attachment: fixed; /* Fija el fondo al hacer scroll */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .container {
+    background-size: auto 100%; /* La altura cubre la pantalla, el ancho se ajusta */
+    background-position: left center; /* Muestra la parte izquierda de la imagen */
+    background-attachment: scroll; /* Quita el fondo fijo en móviles */
+  }
+}
+
+/* Barra de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Centrar el logo */
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  color: white;
+  z-index: 10;
+
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 55px;
+}
+
+.logoImage {
+  width: 100px;  /* Ajusta el tamaño del logo según lo necesites */
+}
+
+
+
+.menuLine {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px; /* Ajusta el padding en móviles */
+  }
+
+  .menuIcon {
+    display: flex;
+    position: absolute;
+    right: 20px; /* Ajusta la posición del ícono */
+  }
+
+  /* No mostrar los enlaces de navegación */
+  .navLinks {
+    display: none;
+  }
+}
+
+
+/* Sección principal con efecto de blur */
+.section {
+  height: 100vh; /* Ajuste automático en pantallas pequeñas */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  margin: 80px auto; /* Centrar horizontalmente */
+  gap: 20px; /* Espacio entre columnas */
+}
+
+.leftColumn {
+  flex: 1;
+  padding-right: 20px;
+  color: white;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-left: 80px;
+
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+    padding-left: 80px;
+}
+
+.logoGrande {
+  width: 100%;
+  max-width: 300px; /* Limitar tamaño máximo */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding-left: 80px;
+}
+
+.mockupImage {
+  width: 100%;
+  height: auto;
+  max-width: 1000px; /* Tamaño máximo */
+  border-radius: 10px;
+}
+
+/* Estilo para botón de descarga */
+.demoButton {
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.demoButton:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos responsivos para tablet y móvil */
+@media (max-width: 1024px) {
+  .section {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px; /* Espacio entre las columnas */
+  }
+
+  .leftColumn {
+    padding-right: 0;
+  }
+
+  .title, .subtitle, .slogan {
+    margin-left: 0;
+  }
+
+  .logoGrande {
+    margin: 0 auto; /* Centrar logo en pantallas pequeñas */
+  }
+
+  .mockupImage {
+    max-width: 400px; /* Reducir tamaño en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .slogan {
+    font-size: 0.9rem;
+  }
+
+  .mockupImage {
+    max-width: 300px; /* Reducir más en móviles */
+  }
+
+  .demoButton {
+    padding-left: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Estilos generales de las secciones con blur */
+.blurSection {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  color: white;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Texto de ventajas, características y otros detalles */
+.textList {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.placeholderText {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.testimonialsSection {
+  margin-top: 20px;
+}
+
+.testimonialText {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 5px 0;
+}
+
+.testimonialAuthor {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sección de descarga */
+.downloadSection {
+  margin-top: 50px;
+}
+
+.downloadText {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.downloadButton {
+  font-size: 1rem;
+  color: white;
+  background-color: #0066ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.downloadButton:hover {
+  background-color: #0052cc;
+}
+
+
+/* Sección en dos columnas */
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.advantagesSection, .featuresSection {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Estilo para cada columna */
+.textColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear texto a la izquierda */
+  gap: 20px;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imágenes */
+.image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Lista de texto */
+.textList {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 1024px) {
+  .twoColumnSection {
+    flex-direction: column; /* Apilar columnas verticalmente */
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .image {
+    max-width: 300px; /* Reducir tamaño de imagen en tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .twoColumnSection {
+    gap: 30px; /* Reducir espacio entre columnas */
+  }
+
+  .textList {
+    font-size: 0.9rem; /* Reducir tamaño del texto en móviles */
+  }
+
+  .image {
+    max-width: 250px; /* Reducir más la imagen en móviles */
+  }
+}
+
+/* Título de cada sección */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Estilo para el título de Testimonios fuera del contenedor */
+.testimonialsTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+/* Sección de testimonios en columnas */
+.testimonialsSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+/* Estilos para cada tarjeta de testimonio */
+.testimonialCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  width: 500px;
+  text-align: center;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 10px 0;
+}
+
+.testimonialAuthor {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* En styles/Home.module.css */
+.logoImage {
+  margin-left: 110px;
+  width: 60px; /* Ajusta el tamaño según lo necesario */
+  height: auto; /* Mantiene la proporción */
+  object-fit: contain; /* Ajusta la imagen para que siempre se vea bien */
+}
+
+/* Icono de información */
+.infoIcon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s;
+  margin-left: 110px;
+  margin-bottom: 20px;
+}
+
+.infoIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para el modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+.closeButton {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #0066ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+  background: #0052cc;
+}
+
+
+.demoButton {
+  background-color: #fff; /* Color de fondo */
+  color: #0024d3; /* Color del texto */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px; /* Separación del ícono */
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  margin-left: 100;
+}
+
+.demoButton:hover {
+  background-color: #3551cc; /* Color al pasar el ratón */
+}
+
+.demoButton:focus {
+  outline: none;
+}
+
+
+
+.footer {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.027);
+  border-radius: 10px;
+}
+
+.footerText {
+  color: white;
+  font-size: 14px;
+}
