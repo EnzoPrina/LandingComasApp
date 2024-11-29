@@ -4,7 +4,7 @@
 
 .container {
   font-family: 'Poppins', sans-serif;
-  background-image: url('../public/background.jpg'); /* Fondo único para todas las pantallas */
+  background-image: url('../public/background2.2-03-03.png'); /* Fondo único para todas las pantallas */
   background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center; /* Centra la imagen inicialmente */
   background-attachment: fixed; /* Fija el fondo al hacer scroll */
